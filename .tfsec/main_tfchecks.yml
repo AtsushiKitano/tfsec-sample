@@ -8,6 +8,6 @@ checks:
     severity: ERROR
     matchSpec:
       name: region
-      action: contains
-      value: asia-northeast
-    errorMessage: "Subnetwork Region is not asia-northeast1 or asia-northeast2 region"
+      action: equals
+      value: asia-northeast1
+    errorMessage: "Subnetwork Region is not asia-northeast region"
