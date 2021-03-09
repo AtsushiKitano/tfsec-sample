@@ -5,7 +5,7 @@ checks:
       - resource
     requiredLabels:
       - google_compute_subnetwork
-    servirity: ERROR
+    severity: ERROR
     matchSpec:
       name: region
       action: contains
