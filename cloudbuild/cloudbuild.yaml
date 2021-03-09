@@ -1,0 +1,30 @@
+steps:
+  - id: "terraform init"
+    name: 'alpine/terragrunt'
+    args: ['terragrunt', 'run-all', 'init']
+    env:
+      - 'PROJECT=$PROJECT_ID'
+
+  - id: "tfsec"
+    name: 'tfsec/tfsec'
+    args: ['.']
+    env:
+      - 'PROJECT=$PROJECT_ID'
+
+  - id: 'terragrunt plan'
+    name: 'alpine/terragrunt'
+    args: ['terragrunt', 'run-all', 'plan']
+    env:
+      - 'PROJECT=$PROJECT_ID'
+
+  - id: 'terragrunt apply'
+    name: 'alpine/terragrunt'
+    args: ['terragrunt', 'run-all', 'apply', '--terragrunt-non-interactive']
+    env:
+      - 'PROJECT=$PROJECT_ID'
+
+  - id: 'terragrunt destroy'
+    name: 'alpine/terragrunt'
+    args: ['terragrunt', 'run-all', 'destroy', '--terragrunt-non-interactive']
+    env:
+      - 'PROJECT=$PROJECT_ID'

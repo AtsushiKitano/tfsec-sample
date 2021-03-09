@@ -1,0 +1,9 @@
+*~
+\#*\#
+.DS_Store
+.terraform
+terraform.tfstate.d
+terraform.tfstate
+
+terraform.tf
+provider.tf
