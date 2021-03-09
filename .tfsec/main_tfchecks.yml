@@ -6,6 +6,7 @@ checks:
     requiredLabels:
       - google_compute_subnetwork
     severity: ERROR
+    ignoreUndefined: true
     matchSpec:
       name: region
       action: equals
