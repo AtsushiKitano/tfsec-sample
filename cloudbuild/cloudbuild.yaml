@@ -1,13 +1,13 @@
 steps:
-  - id: "terraform init"
-    name: 'alpine/terragrunt'
-    args: ['terragrunt', 'run-all', 'init']
-    env:
-      - 'PROJECT=$PROJECT_ID'
+  # - id: "terraform init"
+  #   name: 'alpine/terragrunt'
+  #   args: ['terragrunt', 'run-all', 'init']
+  #   env:
+  #     - 'PROJECT=$PROJECT_ID'
 
   - id: "tfsec"
     name: 'tfsec/tfsec'
-    args: ['.']
+    # args: ['.']
     env:
       - 'PROJECT=$PROJECT_ID'
 
