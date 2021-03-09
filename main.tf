@@ -18,7 +18,7 @@ resource "google_compute_firewall" "main" {
   target_tags = []
 
   direction     = "INGRESS"
-  source_ranges = ["0.0.0.0/0"]
+  source_ranges = ["0.0.0.0/0"] #tfsec:ignore:GCP003
 
   allow {
     protocol = "tcp"
