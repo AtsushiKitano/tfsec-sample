@@ -1,13 +1,13 @@
 checks:
   - code: CUS001
-    description: "Subnetwork region is asia-northeast1"
+    description: "Subnetwork region is japan"
     requiredTypes:
       - resource
     requiredLabels:
       - google_compute_subnetwork
-    servirity: CRITICAL
+    servirity: ERROR
     matchSpec:
       name: region
       action: contains
-      value: asia-northeast1
-    errorMessage: "Subnetwork Region is not asia-northeast1 region"
+      value: asia-northeast
+    errorMessage: "Subnetwork Region is not asia-northeast1 or asia-northeast2 region"
