@@ -7,7 +7,7 @@ steps:
 
   - id: "tfsec"
     name: 'tfsec/tfsec'
-    # args: ['.']
+    args: ['.']
     env:
       - 'PROJECT=$PROJECT_ID'
 
